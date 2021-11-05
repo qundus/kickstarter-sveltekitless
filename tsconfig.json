@@ -34,6 +34,6 @@
 		"src/**/*.svelte",
 		"src/main.ts",
 		"src/locales.ts",
-		"static/pics/assets.ts"
+		"src/assets.ts"
 	]
 }

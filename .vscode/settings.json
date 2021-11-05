@@ -1,8 +1,0 @@
-{
-	"i18n-ally.localesPaths": ["translation/"],
-	"i18n-ally.keystyle": "auto",
-	"i18n-ally.namespace": true,
-	"i18n-ally.pathMatcher": "{locale}.{ext}",
-	"i18n-ally.sortKeys": true,
-	"i18n-ally.keepFulfilled": true
-}
