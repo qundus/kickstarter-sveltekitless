@@ -4,3 +4,5 @@
 .routify/
 package-lock.json
 yarn.lock
+# keep this online only
+README.md
