@@ -1,0 +1,39 @@
+{
+	"extends": "@tsconfig/svelte/tsconfig.json",
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "node",
+		// "strict": true,
+		"jsx": "preserve",
+		"sourceMap": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"lib": ["esnext", "dom"],
+		"types": ["node", "svelte", "vite/client", "@roxi/routify/"],
+		"baseUrl": ".",
+		"paths": {
+			"src/*": ["src/*"],
+			"components": ["src/components/*"],
+			"locales": ["src/locales"],
+			"static": ["static/*"],
+			"style": ["style/*"],
+			"root/*": ["./*"]
+		}
+
+		// could cause errors
+		// "useDefineForClassFields": true
+		// "allowJs": true
+		// "checkJs": true
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.js",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.svelte",
+		"src/main.ts",
+		"src/locales.ts",
+		"static/pics/assets.ts"
+	]
+}
