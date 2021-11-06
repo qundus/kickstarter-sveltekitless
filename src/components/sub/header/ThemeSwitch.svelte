@@ -11,6 +11,7 @@ export enum Themes {
 export let main: Themes = Themes.Light;
 export let next: Themes = Themes.Dark;
 
+$: document.getElementsByTagName("html")[0].classList.toggle(main);
 function next_theme(): void {
 	document.getElementsByTagName("html")[0].classList.toggle(main);
 
@@ -28,8 +29,6 @@ function next_theme(): void {
 		index = 0;
 	}
 	next = keys[index] as Themes;
-
-	document.getElementsByTagName("html")[0].classList.toggle(main);
 }
 </script>
 
