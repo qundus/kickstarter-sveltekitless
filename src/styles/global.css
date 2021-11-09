@@ -1,0 +1,3 @@
+.text_wall {
+	@apply text-primary dark:text-wall;
+}

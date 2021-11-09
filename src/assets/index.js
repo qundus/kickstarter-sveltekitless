@@ -1,3 +1,3 @@
-export const pic = {
+export default {
 	svelte: "/pics/svelte.png",
 };

@@ -1,35 +1,19 @@
-import type LOCALE_I18N from "./_base";
-import type { PAGE_I18N } from "./_base";
-
-const index: PAGE_I18N = {
-	nav: "Home",
-	seo: {
-		title: "Homepage",
+import type AppPages from "./_app";
+export default {
+	index: {
+		nav: "Home",
+		seo: {
+			title: "Homepage",
+		},
+		description: "Svelte kitless",
 	},
-	description: "this is the home page",
-};
 
-const about: PAGE_I18N = {
-	nav: "About",
-	seo: {
-		title: "About Page",
+	_fallback: {
+		nav: "Error Page",
+		seo: {
+			title: "Something went wrong",
+		},
+		back: "Go Back",
+		_404: "Page not found",
 	},
-	description: "this is the about page booiii!",
-};
-
-const fallback: PAGE_I18N = {
-	nav: "Error Page",
-	seo: {
-		title: "Something went wrong",
-	},
-	back: "Go Back",
-	[404]: "Page not found",
-};
-
-const locale: LOCALE_I18N = {
-	index: index,
-	about: about,
-	_fallback: fallback,
-};
-
-export default locale;
+} as AppPages;

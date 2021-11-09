@@ -6,13 +6,5 @@ import SEO from "components/SEO.svelte";
 <SEO />
 <Header />
 
-<div>
-	<!-- routify:options preload="proximity" -->
-	<slot />
-</div>
-
-<style lang="postcss">
-div {
-	@apply w-screen h-screen;
-}
-</style>
+<!-- routify:options preload="proximity" -->
+<slot />

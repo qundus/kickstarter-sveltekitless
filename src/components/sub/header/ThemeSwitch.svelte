@@ -1,15 +1,15 @@
 <script lang="ts" context="module">
 // add more themes and make sure they're added to markup below and your css ofcourse
 // using string values is better than using enum keys as css classes for freedom purposes
-export enum Themes {
+enum Themes {
 	Light = "light",
 	Dark = "dark",
 }
 </script>
 
 <script lang="ts">
-export let main: Themes = Themes.Light;
-export let next: Themes = Themes.Dark;
+let main: Themes = Themes.Light;
+let next: Themes = Themes.Dark;
 
 $: document.getElementsByTagName("html")[0].classList.toggle(main);
 function next_theme(): void {
@@ -34,10 +34,10 @@ function next_theme(): void {
 
 <!-- using remix icon https://remixicon.com -->
 <!-- you could instead save .svg files and import, i like editing the svgs directly -->
-<button class="icon" on:click={() => next_theme()}>
+<button class="icon justify-self-end ring-0" on:click={() => next_theme()}>
 	{#if next === Themes.Dark}
 		<svg
-			class="fill-black-500"
+			class="text-black-500 fill-current"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 			width="24"
@@ -48,7 +48,7 @@ function next_theme(): void {
 		>
 	{:else if next === Themes.Light}
 		<svg
-			class="fill-white"
+			class="text-white fill-current"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 			width="24"
@@ -59,9 +59,3 @@ function next_theme(): void {
 		>
 	{/if}
 </button>
-
-<style lang="postcss">
-.icon {
-	@apply justify-self-end ring-0;
-}
-</style>

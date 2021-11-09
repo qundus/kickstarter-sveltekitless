@@ -15,7 +15,9 @@ $ cd my-template
 ## yarn
 $ yarn && yarn dev
 ## npm
-$ npm i && npm dev
+$ npm i && npm run dev
+## pnpm
+$ pnpm i && pnpm dev
 ```
 
 # What's In It
@@ -31,4 +33,9 @@ $ npm i && npm dev
 
 # Developer Notes
 
-TBC
+### Structure
+
+I like my projects' roots clean and contain only the config files, also i like function descriptive
+folder names, that's why this starter is structured like this.
+
+# TBC

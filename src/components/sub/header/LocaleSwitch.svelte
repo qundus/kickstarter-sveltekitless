@@ -1,27 +1,25 @@
 <script lang="ts">
-import { _, locale, locales, dictionary } from "svelte-i18n";
+import { _, locale } from "svelte-intl-precompile";
 import { onMount } from "svelte";
-import { settings, getLocaleSettings } from "src/locales";
+import * as locales from "src/locales/_locales";
 
+const locales_entries = Object.entries(locales);
 // change direction html according to locale
 let root: Element;
 $: if (root && $locale) {
-	root.setAttribute("dir", getLocaleSettings($locale).css_direction);
+	root.setAttribute("dir", locales[$locale].css_direction);
 }
 
+function onSwitch(): string {
+	return $locale;
+}
 onMount(() => {
 	root = document.getElementsByTagName("html")[0];
 });
 </script>
 
-<select class="rounded-lg" name="langs" bind:value={$locale}>
-	{#each settings as locale}
-		<option value={locale.short}>{locale.name}</option>
+<select class="rounded-lg w-max h-11" name="langs" bind:value={$locale}>
+	{#each locales_entries as [key, value]}
+		<option value={key}>{value.native_name}</option>
 	{/each}
 </select>
-
-<style lang="postcss">
-select {
-	@apply w-max h-11;
-}
-</style>

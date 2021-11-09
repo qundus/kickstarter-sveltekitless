@@ -2,12 +2,14 @@
 import Navigation from "./sub/header/Navigation.svelte";
 import LocaleSwitch from "./sub/header/LocaleSwitch.svelte";
 import ThemeSwitch from "./sub/header/ThemeSwitch.svelte";
-import { pic } from "src/assets";
+import assets from "src/assets/index.js";
 </script>
 
-<main>
+<main
+	class="fixed w-full mt-2 flex justify-between items-center bg-transparent children:(flex items-center)"
+>
 	<div>
-		<a href="/"> <img class="icon" src={pic.svelte} alt="svelte" /></a>
+		<a href="/"> <img class="icon" src={assets.svelte} alt="logo_brand" /></a>
 	</div>
 	<div>
 		<Navigation />
@@ -17,15 +19,3 @@ import { pic } from "src/assets";
 		<ThemeSwitch />
 	</div>
 </main>
-
-<style lang="postcss">
-main {
-	@apply fixed w-full mt-2;
-	@apply flex justify-between items-center;
-	@apply bg-transparent;
-}
-
-main > * {
-	@apply flex items-center;
-}
-</style>

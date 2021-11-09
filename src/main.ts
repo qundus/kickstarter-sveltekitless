@@ -1,8 +1,8 @@
-// load everything before App
+// // load everything before App
 import "virtual:windi.css";
 import "virtual:windi-devtools";
-import "style/global.css";
-import "src/locales";
+import "./styles/global.css";
+import "./locales";
 
 import HMR from "@roxi/routify/hmr";
 import App from "src/App.svelte";

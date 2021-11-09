@@ -10,14 +10,14 @@
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"lib": ["esnext", "dom"],
-		"types": ["node", "svelte", "vite/client", "@roxi/routify/"],
+		"types": ["svelte", "vite/client", "@roxi/routify/"],
 		"baseUrl": ".",
+		// need to be in sync with vite aliases
 		"paths": {
 			"src/*": ["src/*"],
-			"components": ["src/components/*"],
-			"locales": ["src/locales"],
-			"static": ["static/*"],
-			"style": ["style/*"],
+			"components": ["src/components"],
+			"assets": ["src/assets"],
+			"styles": ["src/styles"],
 			"root/*": ["./*"]
 		}
 
@@ -33,7 +33,6 @@
 		"src/**/*.tsx",
 		"src/**/*.svelte",
 		"src/main.ts",
-		"src/locales.ts",
-		"src/assets.ts"
-	]
+		"src/configs/windicss/index.js"
+, "src/assets/index.js"	]
 }

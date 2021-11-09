@@ -1,11 +1,10 @@
 <script lang="ts">
-import { _ } from "svelte-i18n";
 import { url } from "@roxi/routify";
+import T from "src/components/Translate.svelte";
 </script>
 
 <nav>
-	<a href={$url("/error")}>{$_("_fallback.nav")}</a>
-	<a href={$url("/about")}>{$_("about.nav")}</a>
+	<a href={$url("/_fallback")}><T text="_fallback.nav" /></a>
 </nav>
 
 <style lang="postcss">
