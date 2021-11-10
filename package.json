@@ -6,9 +6,9 @@
 		"dev": "concurrently --kill-others routify vite",
 		"build": "routify -b && vite build",
 		"show": "vite preview --open",
-		"test": "pnpm build && pnpm preview",
-		"validate": "svelte-check --tsconfig ./tsconfig.json",
-		"windi-report": "windicss-analysis"
+		"test": "pnpm build && pnpm show",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"report": "concurrently --kill-others windicss-analysis"
 	},
 	"devDependencies": {
 		"@roxi/routify": "^2.14.0",
