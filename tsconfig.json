@@ -32,7 +32,6 @@
 		"src/**/*.d.ts",
 		"src/**/*.tsx",
 		"src/**/*.svelte",
-		"src/main.ts",
-		"src/configs/windicss/index.js"
-, "src/assets/index.js"	]
+		"src/main.ts"
+	]
 }
