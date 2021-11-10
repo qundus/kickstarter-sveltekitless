@@ -35,7 +35,13 @@ $ pnpm i && pnpm dev
 
 ### Structure
 
-I like my projects' roots clean and contain only the config files, also i like function descriptive
-folder names, that's why this starter is structured like this.
+I like my projects' roots clean and contain only the config files that cannot exist in a sub-folder,
+also i like function descriptive folder names, that's why this starter is structured like this.
+
+If you wish to add new folders like: services or any other i recommend doing so within `src`
+directory as it would keep everything together, neat and straight forward.
+
+This way allows for sub-modules to exist in the root directory easily and ease integration with
+other libraries, also, helps focus on tasks in large projects.
 
 # TBC
