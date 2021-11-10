@@ -10,9 +10,6 @@ $: if (root && $locale) {
 	root.setAttribute("dir", locales[$locale].css_direction);
 }
 
-function onSwitch(): string {
-	return $locale;
-}
 onMount(() => {
 	root = document.getElementsByTagName("html")[0];
 });
