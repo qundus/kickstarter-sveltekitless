@@ -37,7 +37,7 @@ function next_theme(): void {
 <button class="icon justify-self-end ring-0" on:click={() => next_theme()}>
 	{#if next === Themes.Dark}
 		<svg
-			class="text-black-500 fill-current"
+			class="fill-black"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 			width="24"
@@ -48,7 +48,7 @@ function next_theme(): void {
 		>
 	{:else if next === Themes.Light}
 		<svg
-			class="text-white fill-current"
+			class="fill-white"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 			width="24"
