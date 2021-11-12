@@ -2,7 +2,7 @@
 import Navigation from "./sub/header/Navigation.svelte";
 import LocaleSwitch from "./sub/header/LocaleSwitch.svelte";
 import ThemeSwitch from "./sub/header/ThemeSwitch.svelte";
-import assets from "src/assets/index.js";
+import assets from "shared/assets";
 </script>
 
 <main

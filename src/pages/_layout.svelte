@@ -1,6 +1,6 @@
 <script>
-import Header from "components/Header.svelte";
-import SEO from "components/SEO.svelte";
+import Header from "src/components/Header.svelte";
+import SEO from "src/components/SEO.svelte";
 </script>
 
 <SEO />

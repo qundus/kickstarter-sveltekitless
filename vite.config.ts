@@ -8,20 +8,20 @@ import precompileIntl from "svelte-intl-precompile/sveltekit-plugin.js";
 // even setting configFiles[] only updaets the first config file
 // so this is the best structure i tested that works well.
 import WindiCSS from "vite-plugin-windicss";
-import windicss_config from "./src/configs/windicss";
+import windicss_config from "./shared/styles/windicss";
 
 const dir = process.cwd();
 export default defineConfig(({ command, mode }) => {
 	const isProduction = mode === "production";
 	return {
 		build: {
-			outDir: "dist", // DO NOT CHANGE
+			outDir: "dist",
 			minify: "esbuild",
 		},
 		server: {
 			port: 3000,
 		},
-		publicDir: "src/assets",
+		publicDir: "shared/assets",
 		optimizeDeps: {
 			exclude: ["@roxi/routify"],
 		},
@@ -31,21 +31,17 @@ export default defineConfig(({ command, mode }) => {
 			alias: {
 				svelte: resolve(dir, "node_modules", "svelte"),
 				"src": resolve(dir, "src"),
-				"components": resolve(dir, "src", "components"),
-				"assets": resolve(dir, "src", "assets"),
-				"styles": resolve(dir, "src", "styles"),
-				"root": resolve(dir),
+				"shared": resolve(dir, "shared"),
 			},
 		},
 		plugins: [
 			WindiCSS({
 				config: windicss_config,
 				scan: {
-					// include: ["src/**/*.{svelte,html,jsx,tsx}"],
 					exclude: ["node_modules/**/*", ".git/**/*"],
 				},
 			}),
-			precompileIntl("src/locales"),
+			precompileIntl("shared/locales"),
 			svelte({
 				emitCss: true, // hand css to windi
 				extensions: [".md", ".svx", ".svelte"],

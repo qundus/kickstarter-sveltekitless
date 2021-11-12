@@ -1,7 +1,7 @@
 <script lang="ts">
 import { _, locale } from "svelte-intl-precompile";
 import { onMount } from "svelte";
-import * as locales from "src/locales/_locales";
+import * as locales from "shared/locales/_locales";
 
 const locales_entries = Object.entries(locales);
 // change direction html according to locale

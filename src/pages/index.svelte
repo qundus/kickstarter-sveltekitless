@@ -1,7 +1,7 @@
 <script>
 import { page } from "@roxi/routify";
 import T from "src/components/Translate.svelte";
-import assets from "assets/index.js";
+import assets from "shared/assets";
 </script>
 
 <main class="h-screen w-screen main flex flex-row">
