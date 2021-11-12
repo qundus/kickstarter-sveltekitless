@@ -1,6 +1,8 @@
 import { defineConfig } from "windicss/helpers";
+import shortcuts from "./shortcuts.js";
+import theme from "./theme.js";
 export default defineConfig({
 	darkMode: "class",
-	shortcuts: require("./shortcuts.cjs").shortcuts,
-	theme: require("./theme.cjs").theme,
+	shortcuts: shortcuts,
+	theme: theme,
 });
